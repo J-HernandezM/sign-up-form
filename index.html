@@ -5,38 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
   </style>
 </head>
 <body>
-
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
+  <main class="main">
+    <div class="left">
+      <p class="left__title">Learn to code by watching others</p>
+      <p class="left__description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </div>
+    <div class="right">
+      <div class="right__offer">
+        <p class="right__offerText"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+      <div class="right__form">
+        <input required autocomplete type="text" name="name" id="name" placeholder="First Name" class="form__input inputTexts name">
+        <input required autocomplete type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input inputTexts last-name">
+        <input required autocomplete type="email" name="email" id="email" placeholder="Email Address" class="form__input inputTexts email">
+        <input required autocomplete type="password" name="password" id="password" placeholder="Password" class="form__input inputTexts password">
+        <button type="submit" class="form__btn btn">Claim your free trial </button>
+        <p class="form__terms">By clicking the button, you are agreeing to our<a href="#" class="terms">Terms and Services</a></p>
+      </div>
+    </div>
+  </main>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/J-HernandezM/">J-HernandezM</a>.
     </p>
   </footer>
+  <script src="./index.js"></script>
 </body>
 </html>
