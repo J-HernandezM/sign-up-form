@@ -12,11 +12,12 @@ inputList.forEach((input)=>{
         const isValid= event.target.validity.valid
         const selectedId=event.target.id
         const spanId= event.target.getAttribute('aria-describedby')
-        /* const inputElement=event.srcElement */
+        const inputElement=event.srcElement
         const errorContainer = document.getElementById(spanId)
         const errorImage = document.querySelector(`.${selectedId}-img`)
         let isImageOff=errorImage.classList.contains('inactive')
-        if(!isValid & isImageOff){
+        let isModified=inputElement.classList.contains('modified')
+        if(!isValid){
             let message
             switch(selectedId){
                 case "name":
@@ -32,15 +33,23 @@ inputList.forEach((input)=>{
                     message=emailMsg
                     break
             }
-            errorContainer.innerHTML=message
-            /* inputElement.classList.add('modified') */
-            errorImage.classList.remove('inactive')
-            errorContainer.classList.remove('inactive')
+            if(isImageOff){
+                errorImage.classList.remove('inactive')
+                errorContainer.classList.remove('inactive')
+                errorContainer.innerHTML=message
+            }
+            if(!isModified){
+                inputElement.classList.add('modified')
+            }
         }
         else{
-            /* inputElement.classList.remove('modified') */
-            errorImage.classList.add('inactive')
-            errorContainer.classList.add('inactive')
+            if(!isImageOff){
+                errorImage.classList.add('inactive')
+                errorContainer.classList.add('inactive')
+            }
+            if(isModified){
+                inputElement.classList.remove('modified')
+            }
         }
     }, )
 
