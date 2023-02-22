@@ -10,27 +10,43 @@
 
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+    .attribution a { color: hsl(248, 32%, 49%); text-decoration: none; font-weight: 700;}
   </style>
 </head>
 <body>
-  <main class="main">
+  <main>
     <div class="left">
-      <p class="left__title">Learn to code by watching others</p>
+      <h1 class="left__title">Learn to code by watching others</h1>
       <p class="left__description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
     </div>
     <div class="right">
       <div class="right__offer">
         <p class="right__offerText"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</p>
       </div>
-      <div class="right__form">
-        <input required autocomplete type="text" name="name" id="name" placeholder="First Name" class="form__input inputTexts name">
-        <input required autocomplete type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input inputTexts last-name">
-        <input required autocomplete type="email" name="email" id="email" placeholder="Email Address" class="form__input inputTexts email">
-        <input required autocomplete type="password" name="password" id="password" placeholder="Password" class="form__input inputTexts password">
-        <button type="submit" class="form__btn btn">Claim your free trial </button>
-        <p class="form__terms">By clicking the button, you are agreeing to our<a href="#" class="terms">Terms and Services</a></p>
-      </div>
+      <form class="right__form">
+        <div class="form__namebox boxes">
+          <input required minlength="3" maxlength="15" autocomplete type="text" name="name" id="name" placeholder="First Name" class="form__input name" aria-describedby="nameSpan">
+          <span id="nameSpan" class="nameSpan errorMessages inactive"></span>
+          <img src="./images/icon-error.svg" alt="error icon" class="name-img inactive errorImages">
+        </div>
+        <div class="form__lastnamebox boxes">
+          <input required minlength="3" maxlength="50"autocomplete type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input last-name" aria-describedby="lastSpan">
+          <span id="lastSpan" class="lastSpan errorMessages inactive"></span>
+          <img src="./images/icon-error.svg" alt="error icon" class="last-name-img inactive errorImages">
+        </div>
+        <div class="form__emailbox boxes">
+          <input required minlength="5" autocomplete type="email" name="email" id="email" placeholder="Email Address" class="form__input email" aria-describedby="emailSpan">
+          <span id="emailSpan" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  class="emailSpan errorMessages inactive"></span>
+          <img src="./images/icon-error.svg" alt="error icon" class="email-img inactive errorImages">
+        </div>
+        <div class="form__passwordbox boxes">
+          <input required minlength="8" autocomplete type="password" name="password" id="password" placeholder="Password" class="form__input password" aria-describedby="passSpan">
+          <span id="passSpan" class="passSpan errorMessages inactive"></span>
+          <img src="./images/icon-error.svg" alt="error icon" class="password-img inactive errorImages">
+        </div>
+        <button type="submit" class="form__btn btn">CLAIM YOUR FREE TRIAL</button>
+        <p class="form__terms">By clicking the button, you are agreeing to our<a href="#" class="terms">&nbsp;Terms and Services</a></p>
+      </form>
     </div>
   </main>
   <footer>
