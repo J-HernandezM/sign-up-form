@@ -9,16 +9,16 @@
     --dark-blue: hsl(249, 10%, 26%) ;
     --grayish-blue: hsl(246, 25%, 77%);
 
-    --input-height:4.8rem;
+    --input-height:48px;
 
-    font-size: 62.5%;
-    --sm:1.6rem;
-    --md:1.7rem;
-    --lg:2.8rem;
-    --s:1.4rem;
-    --xs:1.2rem;
-    --xl:4.0rem;
-    --xxs:1.0rem;
+    /* font-size: 62.5%; */
+    --sm:16px;
+    --md:17px;
+    --lg:28px;
+    --s:14px;
+    --xs:12px;
+    --xl:40px;
+    --xxs:10px;
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -38,8 +38,8 @@ main{
 
     width: 100vw;
     height: 98vh;
-    min-height: 90.0rem;
-    padding: 2.0rem;
+    min-height: 900px;
+    padding: 20px;
 }
 .left{
     display: flex;
@@ -54,11 +54,11 @@ main{
     display: grid;
     grid-template-rows: 17% 83%;
     place-items: center;
-    gap: 2.4rem;
+    gap: 24px;
 }
 /* tipografia */
 .left__title{
-    margin-bottom: 2.4rem;
+    margin-bottom: 24px;
 
     font-size: var(--lg);
     font-weight: 700;
@@ -93,7 +93,7 @@ main{
     font-size: var(--s);
 }
 .form__input:focus{
-    outline: .1rem var(--dark-blue) solid;
+    outline: 1px var(--dark-blue) solid;
 }
 .terms{
     text-decoration: none;
@@ -103,7 +103,7 @@ main{
 .errorMessages{
     display: inline-block;
 
-    margin-top: .2rem;
+    margin-top: 2px;
     width: 99%;
 
     color: var(--red);
@@ -122,7 +122,7 @@ main{
     height: 100%;
 
     background-color: var(--blue);
-    border-radius: 1.6rem;
+    border-radius: 16px;
     box-shadow: 0px 4px rgba(0, 0, 0, 0.219);
 }
 .right__form{
@@ -131,12 +131,12 @@ main{
     align-items: center;
     justify-content: space-around;
 
-    min-height: 40.0rem;
+    min-height: 400px;
     width: 100%;
-    padding: 2.0rem;
+    padding: 20px;
 
     background-color: white;
-    border-radius: 1.6rem;
+    border-radius: 16px;
     box-shadow: 0px 7px rgba(0, 0, 0, 0.219);
 }
 .form__btn{
@@ -146,16 +146,16 @@ main{
     font-weight: 700;
     color: white;
     background-color: var(--green);
-    border-radius: .8rem;
+    border-radius: 8px;
     border: none;
-    letter-spacing: .08rem;
+    letter-spacing: .8px;
 }
 .form__btn:hover{
     cursor: pointer;
     background-color: hsla(154, 59%, 51%, 0.795);
 }
 .boxes{
-    margin-bottom: 2.0rem;
+    margin-bottom: 20px;
 }
 .boxes{
     position: relative;
@@ -166,19 +166,19 @@ main{
 .form__input{
     width: 100%;
     height: var(--input-height);
-    padding: 2.0rem;
+    padding: 20px;
 
-    border-radius: .8rem;
-    border: .1rem solid var(--grayish-blue);
+    border-radius: 8px;
+    border: 1px solid var(--grayish-blue);
 }
 .errorImages{
     position: absolute;
     top: 25%;
-    right: 2.0rem;
+    right: 20px;
 }
 /* states */
 .modified{
-    outline: var(--red) .15rem solid;
+    outline: var(--red) 15px solid;
 }
 .inactive{
     display:none;
@@ -191,7 +191,7 @@ main{
         background-image: url(./images/bg-intro-desktop.png);
     }
     main{
-        max-width: 46.0rem;
+        max-width: 460px;
     }
     /* tipografia */
     /* componentes */
@@ -212,9 +212,9 @@ main{
         gap: 6%;
 
         width: 80%;
-        max-width: 108.0rem;
-        min-height: 57.5rem;
-        max-height: 63.5rem;
+        max-width: 1080px;
+        min-height: 575px;
+        max-height: 635px;
         height: 70%;
         padding: 0;
     }
@@ -228,7 +228,7 @@ main{
     /* tipografia */
     .left__title{
         font-size: var(--xl);
-        line-height: 4.5rem;
+        line-height: 45px;
     }
     .left__description{
         font-size: var(--sm);
@@ -241,17 +241,17 @@ main{
     .right__form{
         justify-content: center;
         
-        padding-left:4.0rem;
-        padding-right: 4.0rem;
+        padding-left:40px;
+        padding-right: 40px;
 
-        border-radius: .8rem;
+        border-radius: 8px;
 
     }
     .right__offer{
-        border-radius: .8rem;
+        border-radius: 8px;
     }
     .boxes, .form__btn{
-        margin-bottom: 2.0rem;
-        border-radius: .4rem;
+        margin-bottom: 20px;
+        border-radius: 4px;
     }
 }
